@@ -1,0 +1,5 @@
+---
+- name: put collectd config file
+  template: src=solr.conf dest=/etc/collectd/collectd.conf.d/solr.conf owner=root group=root mode=0644
+  notify:
+  - restart collectd
